@@ -9,12 +9,13 @@ because of concurrency.
 """
 import asyncio
 from typing import List
-
 wait_rdm = __import__('0-basic_async_syntax').wait_rdm
 
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
-    """async routine called wait_n that takes in 2 int arguments"""
+    """
+    async routine called wait_n that takes in 2 int arguments
+    """
     task = [wait_rdm(max_delay) for i in range(n)]
     delay = await asyncio.gather(*task)
     return sorted(delay)
