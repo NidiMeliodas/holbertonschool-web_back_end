@@ -20,8 +20,7 @@ from typing import List, Dict
 
 
 class Server:
-    """
-    comment
+    """Server class to paginate a database of popular baby names.
     """
     DATA_FILE = "Popular_Baby_Names.csv"
 
@@ -30,8 +29,7 @@ class Server:
         self.__indexed_dataset = None
 
     def dataset(self) -> List[List]:
-        """
-        comment
+        """Cached dataset
         """
         if self.__dataset is None:
             with open(self.DATA_FILE) as f:
@@ -42,8 +40,7 @@ class Server:
         return self.__dataset
 
     def indexed_dataset(self) -> Dict[int, List]:
-        """
-        comment
+        """Dataset indexed by sorting position, starting at 0
         """
         if self.__indexed_dataset is None:
             dataset = self.dataset()
@@ -55,7 +52,10 @@ class Server:
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """
-        comment
+        The valid range for the index is from 0 to the length of the dataset
+        minus 1 because in Python list indices start at 0, not 1.
+        Here, because the range function excludes the end value we refer
+        to total_items and not total_items - 1
         """
         total_items = len(self.dataset())
         assert index in range(0, total_items)
