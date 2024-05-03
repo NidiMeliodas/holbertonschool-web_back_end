@@ -6,6 +6,7 @@ Task 12 - NoSQL
 
 from pymongo import MongoClient
 
+
 if __name__ == "__main__":
     """ test"""
     client = MongoClient('mongodb://127.0.0.1:27017')
