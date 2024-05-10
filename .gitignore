@@ -6,3 +6,9 @@ ES6_basic/.eslintrc.js
 ES6_basic/babel.config.js
 ES6_basic/package-lock.json
 ES6_basic/package.json
+
+ES6_classes/node_modules/
+ES6_classes/.eslintrc.js
+ES6_classes/babel.config.js
+ES6_classes/package-lock.json
+ES6_classes/package.json
