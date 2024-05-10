@@ -1,2 +1,8 @@
 NoSQL/dump/logs/nginx.metadata.json
 NoSQL/dump/logs/nginx.bson
+
+ES6_basic/node_modules/
+ES6_basic/.eslintrc.js
+ES6_basic/babel.config.js
+ES6_basic/package-lock.json
+ES6_basic/package.json
