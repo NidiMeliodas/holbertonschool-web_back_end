@@ -12,3 +12,7 @@ ES6_classes/.eslintrc.js
 ES6_classes/babel.config.js
 ES6_classes/package-lock.json
 ES6_classes/package.json
+
+ES6_promise/*main.js
+
+
